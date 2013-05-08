@@ -3,7 +3,7 @@
 Plugin Name: Updater Test
 Plugin URI: TODO
 Description: TODO
-Version: 0.2 
+Version: 0.3 
 Author: TODO
 Author URI: TODO
 Author Email: TODO
