@@ -3,7 +3,7 @@
 Plugin Name: Updater Test
 Plugin URI: TODO
 Description: TODO
-Version: 1.0
+Version: 0.1 
 Author: TODO
 Author URI: TODO
 Author Email: TODO
@@ -24,7 +24,7 @@ License:
   along with this program; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-  ~Version: 0.2~
+  ~Current Version: 0.1~
 
 */
 
@@ -275,6 +275,8 @@ class UpdaterTest {
 	public function github_updater() {
 
 		include_once 'vendor/updater.php';
+
+		define( 'WP_GITHUB_FORCE_UPDATE', true );
 
 		if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
 
