@@ -320,4 +320,5 @@ $config = array(
 );
 
 new WP_GitHub_Updater( $config );
+}
 
