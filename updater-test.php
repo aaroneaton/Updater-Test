@@ -24,7 +24,6 @@ License:
   along with this program; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-  ~Current Version: 0.2~
 
 */
 
@@ -71,9 +70,6 @@ class UpdaterTest {
 
 		// Load plugin text domain
 		add_action( 'init', array( $this, 'plugin_textdomain' ) );
-
-		// Load the updater
-		add_action( 'init', array( $this, 'github_updater' ) );
 
 	    /*
 	     * Add the options page and menu item.
@@ -303,4 +299,25 @@ class UpdaterTest {
 
 // TODO:	Update the instantiation call of your plugin to the name given at the class definition
 UpdaterTest::get_instance();
+
+
+define( 'WP_GITHUB_FORCE_UPDATE', true );
+
+if ( is_admin() ) { // note the use of is_admin() to double check that this is happening in the admin
+
+include_once 'vendor/updater.php';
+$config = array(
+	'slug' => plugin_basename( __FILE__ ),
+	'proper_folder_name' => 'updater-test',
+	'api_url' => 'https://api.github.com/repos/channeleaton/Updater-Test',
+	'raw_url' => 'https://raw.github.com/channeleaton/Updater-Test/master',
+	'github_url' => 'https://github.com/channeleaton/Updater-Test',
+	'zip_url' => 'https://github.com/channeleaton/Updater-Test/zipball/master',
+	'sslverify' => true,
+	'requires' => '3.0',
+	'tested' => '3.3',
+	'readme' => 'README.txt',
+);
+
+new WP_GitHub_Updater( $config );
 
