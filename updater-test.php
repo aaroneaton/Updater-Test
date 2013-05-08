@@ -3,7 +3,7 @@
 Plugin Name: Updater Test
 Plugin URI: TODO
 Description: TODO
-Version: 0.1 
+Version: 0.2 
 Author: TODO
 Author URI: TODO
 Author Email: TODO
@@ -24,7 +24,7 @@ License:
   along with this program; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-  ~Current Version: 0.1~
+  ~Current Version: 0.2~
 
 */
 
